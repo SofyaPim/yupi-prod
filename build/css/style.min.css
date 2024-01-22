@@ -1786,8 +1786,8 @@ button.swiper-pagination-bullet {
 .progress__btn-block {
   padding: 1rem clamp(1rem, 5vw, 3.125rem);
   align-self: center;
-  min-width: 60%;
-  max-width: 60%;
+  min-width: 40%;
+  max-width: 40%;
   padding-right: 1.25rem;
 }
 
@@ -1851,6 +1851,11 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 530px) {
+  .progress__btn-block {
+    min-width: 60%;
+    max-width: 60%;
+    padding-right: 0px;
+  }
   .progress__years.desktop {
     display: none;
   }
