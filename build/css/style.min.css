@@ -1454,7 +1454,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 2.5rem;
+  padding-right: 2.5rem;
 }
 .releases__block-card img {
   width: 50%;
@@ -1482,6 +1482,13 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 700px) {
+  .releases__block-card {
+    align-items: center;
+    padding-right: 0;
+  }
+  .releases__block-card h5, .releases__block-card p {
+    text-align: center;
+  }
   .releases__block-header {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -1511,6 +1518,9 @@ button.swiper-pagination-bullet {
   .releases__block {
     padding: 0;
   }
+  .releases__block .swiper-horizontal > .swiper-pagination-bullets, .releases__block .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -2rem;
+  }
   .releases__block-header {
     padding: clamp(1.375rem, 8vw, 3.125rem) clamp(1.375rem, 8vw, 3.125rem);
     flex-direction: column;
@@ -1523,6 +1533,9 @@ button.swiper-pagination-bullet {
 .technologies {
   padding: 0;
 }
+.technologies .swiper-wrapper {
+  height: 17.1875rem;
+}
 .technologies .swiper-slide {
   background-color: var(--main-text-color);
   min-height: inherit;
@@ -1534,7 +1547,7 @@ button.swiper-pagination-bullet {
 }
 
 .technologies__block-slider {
-  padding: 0 clamp(1.375rem, 5vw, 3.125rem) clamp(1.375rem, 5vw, 3.125rem);
+  padding: 0 clamp(1.375rem, 5vw, 3.125rem) 2.5rem;
 }
 
 .technologies__block-header {
@@ -1576,7 +1589,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 .technologies__block-card img {
   width: 50%;
@@ -1585,14 +1598,16 @@ button.swiper-pagination-bullet {
 .technologies__block-card h5 {
   font-size: 1.25rem;
   font-weight: bold;
-  padding: 3.125rem 0 0.75rem;
+  padding-top: clamp(1rem, 5vw, 2.5rem);
+  padding-bottom: 0.75rem;
 }
 .technologies__block-card p {
   color: var(--main-color);
   opacity: 0.6;
   text-align: center;
-  font-weight: 0.875rem;
-  line-height: 1.25rem;
+  font-weight: lighter;
+  line-height: 1;
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
 }
 
 @media (max-width: 700px) {
@@ -1632,6 +1647,11 @@ button.swiper-pagination-bullet {
   .technologies__block .right-cell p {
     padding-left: 0.3125rem;
     text-align: left;
+  }
+}
+@media (max-width: 500px) {
+  .technologies .swiper-wrapper {
+    height: 14.375rem;
   }
 }
 .yupi-people {
